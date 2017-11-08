@@ -9,7 +9,7 @@
 #include "basic_dir_monitor.hpp"
 #include <boost/predef/os.h>
 
-#if BOOST_OS_WINDOWS
+#if (BOOST_OS_WINDOWS || BOOST_OS_CYGWIN)
 #  include "windows/basic_dir_monitor_service.hpp"
 #elif (BOOST_OS_LINUX || BOOST_OS_ANDROID)
 #  include "inotify/basic_dir_monitor_service.hpp"
